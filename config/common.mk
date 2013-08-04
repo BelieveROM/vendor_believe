@@ -3,6 +3,9 @@ PRODUCT_NAME := believe
 PRODUCT_BRAND := believe
 PRODUCT_DEVICE := generic
 
+SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
+
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/believe/overlay/common
 
@@ -18,7 +21,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     DashClock \
     Development \
-    Apollo
+    Apollo \
+    Superuser \
+    su
 
 # SIM Toolkit
 PRODUCT_PACKAGES += \
@@ -32,7 +37,13 @@ PRODUCT_PACKAGES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-        vendor/believe/prebuilt/common/bin/sysinit:system/bin/sysinit
+        vendor/believe/prebuilt/common/bin/sysinit:system/bin/sysinit \
+        vendor/believe/prebuilt/common/etc/init.br.rc:root/init.br.rc
+        
+# userinit support
+PRODUCT_COPY_FILES += \
+    vendor/believe/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+
 
 # Propiortary applications
 PRODUCT_COPY_FILES += \

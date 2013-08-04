@@ -3,6 +3,7 @@ $(call inherit-product, device/samsung/toro/full_toro.mk)
 
 # Inherit common product files.
 $(call inherit-product, vendor/believe/config/common.mk)
+$(call inherit-product, vendor/believe/config/theme.mk)
 
 # Setup device specific product configuration.
 PRODUCT_NAME := believe_toro
@@ -11,17 +12,14 @@ PRODUCT_DEVICE := toro
 PRODUCT_MODEL := Galaxy Nexus
 PRODUCT_MANUFACTURER := samsung
 
-#Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_NUMBER=573038 \
-    BUILD_ID=ICL53F \
-    PRODUCT_NAME=mysid \
-    BUILD_DISPLAY_ID=JSS15J \
-    BUILD_VERSION_TAGS=release-keys \
-    USER=android-build \
-    PRIVATE_BUILD_DESC="mysid-user 4.2.2 JDQ39 573038 release-keys" \
-    BUILD_FINGERPRINT="google/mysid/toro:4.2.2/JDQ39/573038:user/release-keys"
+# Setup device specific product configuration.
+PRODUCT_NAME := believe_toro
+PRODUCT_BRAND := google
+PRODUCT_DEVICE := toro
+PRODUCT_MODEL := Galaxy Nexus
+PRODUCT_MANUFACTURER := samsung
 
+PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=mysid BUILD_ID=JWR66V BUILD_FINGERPRINT="google/mysid/toro:4.3/JWR66V/573038:user/release-keys" PRIVATE_BUILD_DESC="mysid-user 4.3 JWR66V 573038 release-keys" BUILD_NUMBER=573038
 
 # Inherit common build.prop overrides
 -include vendor/believe/config/common_versions.mk
