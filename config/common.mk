@@ -23,7 +23,8 @@ PRODUCT_PACKAGES += \
     Development \
     Apollo \
     Superuser \
-    su
+    su \
+    Focal
 
 # SIM Toolkit
 PRODUCT_PACKAGES += \
