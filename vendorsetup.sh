@@ -1,2 +1,3 @@
 add_lunch_combo believe_toro-user
+add_lunch_combo believe_maguro-user
 
