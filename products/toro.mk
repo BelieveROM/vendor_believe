@@ -1,6 +1,10 @@
 # Inherit AOSP device configuration for toro.
 $(call inherit-product, device/samsung/toro/full_toro.mk)
 
+# Inherit torch settings
+$(call inherit-product, vendor/believe/config/common_ledflash.mk)
+
+
 # Inherit common product files.
 $(call inherit-product, vendor/believe/config/common.mk)
 $(call inherit-product, vendor/believe/config/theme.mk)

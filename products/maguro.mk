@@ -1,6 +1,9 @@
 # Inherit AOSP device configuration for maguro.
 $(call inherit-product, device/samsung/maguro/full_maguro.mk)
 
+# Inherit torch settings
+$(call inherit-product, vendor/believe/config/common_ledflash.mk)
+
 # Inherit common product files.
 $(call inherit-product, vendor/believe/config/common.mk)
 $(call inherit-product, vendor/believe/config/theme.mk)
