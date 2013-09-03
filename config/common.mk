@@ -3,8 +3,6 @@ PRODUCT_NAME := believe
 PRODUCT_BRAND := believe
 PRODUCT_DEVICE := generic
 
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/believe/overlay/common
@@ -16,8 +14,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.feedback \
     ro.setupwizard.enterprise_mode=1 \
-    ro.modversion=Beta-2 \
-    ro.romversion=1.0
+    ro.modversion=Beta-3 \
+    ro.romversion=1.0 \
+    ro.goo.developerid=BelieveROM \
+    ro.goo.version=100 \
+    ro.goo.rom=BelieveROM
   
 # standard believe packages 
 PRODUCT_PACKAGES += \
@@ -33,8 +34,6 @@ PRODUCT_PACKAGES += \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf \
-    Superuser \
-    su \
     CMFileManager
 
 # SIM Toolkit
