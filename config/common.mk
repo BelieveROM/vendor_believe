@@ -36,6 +36,12 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     CMFileManager
 
+# SELinux filesystem labels
+PRODUCT_COPY_FILES += \
+    vendor/believe/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
+
+-include vendor/believe/sepolicy/sepolicy.mk
+
 # SIM Toolkit
 PRODUCT_PACKAGES += \
     Stk
