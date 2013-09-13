@@ -19,8 +19,7 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 
-
-PRODUCT_BUILD_PROP_OVERRIDES +=  PRODUCT_NAME=mysidspr BUILD_FINGERPRINT="samsung/mysidspr/toroplus:4.2.1/JOP40D/eng.ar.20121202.005722:userdebug/release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=mysidspr BUILD_DISPLAY_ID=JSS15Q BUILD_FINGERPRINT="samsung/mysidspr/toroplus:4.3/JSS15Q/737497:user/release-keys" PRIVATE_BUILD_DESC="mysidspr-user 4.3 JSS15Q 737497 release-keys"
 PRIVATE_BUILD_DESC="mysidspr-userdebug 4.2.1 JOP40D 005722 release-keys"
 
 
